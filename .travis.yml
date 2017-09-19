@@ -11,8 +11,8 @@ before_install:
 install:
 - npm install
 script:
-- npm run prepush
-- npm run precommit
+- npm run prepush | tee 'prepush.log'
+- npm run precommit | tee 'precommit.log'
 after_success:
 - npm run update-coverage
 after_script:
