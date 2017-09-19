@@ -1,6 +1,6 @@
-import Expo from 'expo';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Expo from 'expo'
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
 export default class App extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class App extends React.Component {
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
       </View>
-    );
+    )
   }
 }
 
@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
 
-Expo.registerRootComponent(App);
+Expo.registerRootComponent(App)
