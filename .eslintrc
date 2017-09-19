@@ -22,6 +22,7 @@
     "react/sort-comp": 0,
     "no-shadow": 0,
     "semi": [2, "never"],
+    "no-plusplus": [2, "never"],
     "dot-notation": 0,
     "no-underscore-dangle": 0,
     "import/no-unresolved": 0,
