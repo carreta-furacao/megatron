@@ -12,7 +12,7 @@ install:
 - npm install
 script:
 - npm run prepush | tee 'prepush.log'
-- npm run precommit | tee 'precommit.log'
+- npm run precommit
 after_success:
 - npm run update-coverage
 after_script:
