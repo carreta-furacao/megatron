@@ -1,19 +1,14 @@
-import React, { Component } from 'react'
-import { FlatList, Text, StyleSheet, View } from 'react-native'
 import PropTypes from 'prop-types'
+import { FlatList } from 'react-native'
+import React, { Component } from 'react'
+import { Profile } from '../components/profile'
 
 export class CongressmenList extends Component {
   static propTypes = {
     congressmen: PropTypes.array.isRequired
   }
 
-  renderCongressman = ({ item }) => {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.text}>{item.nome}</Text>
-      </View>
-    )
-  }
+  renderCongressman = ({ item }) => (<Profile congressman={item} />)
 
   render() {
     return (
@@ -25,16 +20,3 @@ export class CongressmenList extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 20,
-    fontWeight: 'bold'
-  },
-  container: {
-    flex: 1,
-    height: 100,
-    justifyContent: 'center',
-    margin: 100
-  }
-})
