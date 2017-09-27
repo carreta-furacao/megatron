@@ -7,7 +7,7 @@ import { StyleSheet, View } from 'react-native'
 
 import { CongressmenList } from './modules/congressmen/containers/congressmenList'
 
-const congressman = {
+const congressmen = [{
   id: 178957,
   uri: 'https://dadosabertos.camara.leg.br/api/v2/deputados/178957',
   nome: 'ABEL MESQUITA JR.',
@@ -16,11 +16,21 @@ const congressman = {
   siglaUf: 'RR',
   idLegislatura: 55,
   urlFoto: 'http://www.camara.leg.br/internet/deputado/bandep/178957.jpg'
-}
+},
+{
+  id: 666,
+  uri: 'https://dadosabertos.camara.leg.br/api/v2/deputados/178957',
+  nome: 'ABEL MESQUITA JR. 2',
+  siglaPartido: 'DEM',
+  uriPartido: 'https://dadosabertos.camara.leg.br/api/v2/partidos/36769',
+  siglaUf: 'RR',
+  idLegislatura: 55,
+  urlFoto: 'http://www.camara.leg.br/internet/deputado/bandep/178957.jpg'
+}]
 
 const App = () => (
   <View style={styles.container}>
-    <CongressmenList congressmen={[congressman]} />
+    <CongressmenList congressmen={congressmen} />
   </View>
 )
 
