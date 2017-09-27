@@ -2,37 +2,29 @@
 
 // $FlowFixMe
 import Expo from 'expo'
-import React from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 
+import { fetchAllCongressmen } from './services/megazord'
 import { CongressmenList } from './modules/congressmen/containers/congressmenList'
 
-const congressmen = [{
-  id: 178957,
-  uri: 'https://dadosabertos.camara.leg.br/api/v2/deputados/178957',
-  nome: 'ABEL MESQUITA JR.',
-  siglaPartido: 'DEM',
-  uriPartido: 'https://dadosabertos.camara.leg.br/api/v2/partidos/36769',
-  siglaUf: 'RR',
-  idLegislatura: 55,
-  urlFoto: 'http://www.camara.leg.br/internet/deputado/bandep/178957.jpg'
-},
-{
-  id: 666,
-  uri: 'https://dadosabertos.camara.leg.br/api/v2/deputados/178957',
-  nome: 'ABEL MESQUITA JR. 2',
-  siglaPartido: 'DEM',
-  uriPartido: 'https://dadosabertos.camara.leg.br/api/v2/partidos/36769',
-  siglaUf: 'RR',
-  idLegislatura: 55,
-  urlFoto: 'http://www.camara.leg.br/internet/deputado/bandep/178957.jpg'
-}]
+class App extends Component {
+  state = { congressmen: [] }
 
-const App = () => (
-  <View style={styles.container}>
-    <CongressmenList congressmen={congressmen} />
-  </View>
-)
+  componentDidMount = async () => {
+    const response = await fetchAllCongressmen()
+    this.setState({ congressmen: response.dados })
+  }
+
+  render () {
+    return (
+      <View style={styles.container}>
+        <CongressmenList congressmen={this.state.congressmen} />
+      </View>
+    )
+  }
+}
+
 
 const styles = StyleSheet.create({
   container: {
