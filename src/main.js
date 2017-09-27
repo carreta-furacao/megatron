@@ -5,7 +5,7 @@ import Expo from 'expo'
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 
-import { fetchAllCongressmen } from './services/megazord'
+import { fetchAllCongressmen } from './services/bumblebee'
 import { CongressmenList } from './modules/congressmen/containers/congressmenList'
 
 class App extends Component {

@@ -1,10 +1,10 @@
 import fetchMock from 'jest-fetch-mock'
-import { fetchAllCongressmen } from '../../../src/services/megazord'
+import { fetchAllCongressmen } from '../../../src/services/bumblebee'
 import congressmenFixture from '../../fixtures/congressmenFixture.json'
 
 fetch = fetchMock
 
-describe('Megazord API tests', () => {
+describe('bumblebee API tests', () => {
   it('should return all congressmen as object', async () => {
     fetch.mockResponse(JSON.stringify(congressmenFixture))
     const congressmen = await fetchAllCongressmen()
