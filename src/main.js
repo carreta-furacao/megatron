@@ -16,7 +16,7 @@ class App extends Component {
     this.setState({ congressmen: response.dados })
   }
 
-  render () {
+  render() {
     return (
       <View style={styles.container}>
         <CongressmenList congressmen={this.state.congressmen} />
