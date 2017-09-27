@@ -14,7 +14,7 @@ exports[`<Profile /> should have a snapshot 1`] = `
   <Image
     source={
       Object {
-        "uri": "http://www.camara.leg.br/internet/deputado/bandep/178957.jpg",
+        "uri": "http://www.camara.leg.br/internet/deputado/bandep/666.jpg",
       }
     }
     style={
@@ -36,7 +36,7 @@ exports[`<Profile /> should have a snapshot 1`] = `
       }
     }
   >
-    ABEL MESQUITA JR.
+    Vinicius Costa
   </Text>
 </View>
 `;

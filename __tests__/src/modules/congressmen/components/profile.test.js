@@ -2,18 +2,10 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import { Profile } from '../../../../../src/modules/congressmen/components/profile'
+import { congressman } from '../../../../fixtures/congressman.fixture'
 
 const props = {
-  congressman: {
-    id: 178957,
-    uri: 'https://dadosabertos.camara.leg.br/api/v2/deputados/178957',
-    nome: 'ABEL MESQUITA JR.',
-    siglaPartido: 'DEM',
-    uriPartido: 'https://dadosabertos.camara.leg.br/api/v2/partidos/36769',
-    siglaUf: 'RR',
-    idLegislatura: 55,
-    urlFoto: 'http://www.camara.leg.br/internet/deputado/bandep/178957.jpg'
-  }
+  congressman
 }
 
 describe('<Profile />', () => {
